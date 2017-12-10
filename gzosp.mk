@@ -19,7 +19,12 @@ $(call inherit-product, device/motorola/addison/full_addison.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Enhanced NFC
+ #$(call inherit-product, vendor/gzosp/config/nfc_enhanced.mk)
+ +#$(call inherit-product, vendor/validus/config/nfc_enhanced.mk)
 
+# Inherit some common Gzosp stuff.
+ $(call inherit-product, vendor/gzosp/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
