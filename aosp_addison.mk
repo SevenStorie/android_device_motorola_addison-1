@@ -16,6 +16,13 @@
 
 $(call inherit-product, device/motorola/addison/full_addison.mk)
 
+
+# Inherit some common AOSP stuff.
+TARGET_ARCH := arm
+TARGET_DENSITY := xxhdpi
+TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := addison
 PRODUCT_NAME := aosp_addison
