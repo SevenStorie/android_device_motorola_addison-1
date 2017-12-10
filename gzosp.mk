@@ -17,13 +17,17 @@
 
 $(call inherit-product, device/motorola/addison/full_addison.mk)
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+
+
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := addison
-PRODUCT_NAME := validus_addison
+PRODUCT_NAME := gzosp_addison
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 
@@ -34,5 +38,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="addison-user 7.1.1 NPNS26.118-22-1 1 release-keys" \
     PRODUCT_NAME="Moto Z Play"
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-	DEVICE_MAINTAINERS="Kagami"
